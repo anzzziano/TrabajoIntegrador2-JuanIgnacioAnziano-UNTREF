@@ -50,7 +50,7 @@ app.get("/contenidos", async (req, res) => {
 ```
 
 respuesta un **200 OK** , devolviendo un json con todo el contenido.
-example = /contenidos
+example = http://localhost:3000/contenidos
 
 **RUTA PARA OBTENER UN CONTENIDO POR SU ID**
 
@@ -73,7 +73,7 @@ app.get("/contenidos/:idContenido", async (req, res) => {
 
 **parametros en la busqueda:**
 idContenido = especificar el id del contenido que desee buscar.
-example : /contenidos/22
+example : http://localhost:3000/contenidos/22
 
 respuesta un **200 OK** devolviendo en contenido del id proporcionado
 
@@ -103,7 +103,7 @@ app.get("/contenidos/titulo/:titulo", async (req, res) => {
 });
 ```
 
-los **PARAMETROS** de esta busqueda deben contener el titulo del contenido proporcionado , exmple = /contenidos/titulo/riverdale
+los **PARAMETROS** de esta busqueda deben contener el titulo del contenido proporcionado , exmple = http://localhost:3000/contenidos/titulo/riverdale
 
 si la busqueda fue correcta devolveria un **200 OK**
 
