@@ -49,8 +49,11 @@ app.get("/contenidos", async (req, res) => {
 });
 ```
 
-respuesta un **200 OK** , devolviendo un json con todo el contenido utilizando **GET**:
-example = http://localhost:3000/contenidos
+respuesta un **200 OK** , devolviendo un json con todo el contenido utilizando el metodo **GET**:
+
+example =
+
+http://localhost:3000/contenidos
 
 **RUTA PARA OBTENER UN CONTENIDO POR SU ID**
 
@@ -72,8 +75,11 @@ app.get("/contenidos/:idContenido", async (req, res) => {
 ```
 
 **parametros en la busqueda:**
-idContenido = especificar el id del contenido que desee buscar utilizando **GET**:
-example : http://localhost:3000/contenidos/22
+idContenido = especificar el id del contenido que desee buscar utilizando el metodo **GET**:
+
+example :
+
+http://localhost:3000/contenidos/22
 
 respuesta un **200 OK** devolviendo en contenido del id proporcionado
 
@@ -103,12 +109,13 @@ app.get("/contenidos/titulo/:titulo", async (req, res) => {
 });
 ```
 
-los **PARAMETROS** de esta busqueda deben contener el **titulo del contenido** proporcionado, utiliza en esta consulta el metodo **GET** , exmple = http://localhost:3000/contenidos/titulo/riverdale
+los **PARAMETROS** de esta busqueda deben contener el **titulo del contenido** , utiliza en esta consulta el metodo **GET** . exmple = 
+
+http://localhost:3000/contenidos/titulo/riverdale
 
 si la busqueda fue correcta devolveria un **200 OK**
 
 **CREAR UN CONTENIDO UTILIZANDO POST**
-
 
 ```javascript
 app.post("/contenidos", async (req, res) => {
@@ -141,7 +148,9 @@ app.post("/contenidos", async (req, res) => {
 });
 ```
 
-en postman establecer esta ruta al hacer el **POST** : http://localhost:3000/contenidos 
+en postman establecer esta ruta al hacer el **POST** :
+
+http://localhost:3000/contenidos 
 
 luego establecida esa ruta, ingresar en el **BODY** de la peticion el siguiente **JSON**:
 
@@ -196,7 +205,9 @@ app.put("/contenidos/:idContenido", async (req, res) => {
 });
 ```
 en postman establecer el metodo **PUT** para modificar un contenido utilizando como parametro su **ID** ,
+
 example :
+
 http://localhost:3000/contenidos/36 
 
 luego establecida esa ruta......ingresar en el **BODY** de la peticion el siguiente JSON:
@@ -239,7 +250,7 @@ en postman al utilizar el metodo **DELETE** , establecer esta ruta que se encuen
 
 http://localhost:3000/contenidos/36 
 
-en este caso no se necesita establecer ningun body porque lo que estamos buscando es eliminar el contenido por su **ID**
+en este caso no se necesita establecer ningun body porque lo que se esta buscando es eliminar el contenido por su **ID**
 
 **CONTROL DE ERRORES PARA RUTAS INEXISTENTES**
 
