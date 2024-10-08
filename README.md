@@ -148,7 +148,9 @@ app.post("/contenidos", async (req, res) => {
 });
 ```
 
-en postman establecer esta ruta al hacer el **POST** :
+en postman establecer esta ruta al hacer el metodo **POST** 
+
+ejemplo :
 
 http://localhost:3000/contenidos 
 
@@ -156,12 +158,12 @@ luego establecida esa ruta, ingresar en el **BODY** de la peticion el siguiente 
 
 ```json
 {
-  "idContenido":"36",
+     "idContenido":"36",
      "poster":"/poster/36.jpg",
      "titulo": "The Matrix",
      "idCategoria":"36",
-    "resumen": "Un hacker descubre que el mundo que conoce es una simulación y se une a una rebelión para liberarlo.",
-    "idTrailer":"20"
+      "resumen": "Un hacker descubre que el mundo que conoce es una simulación y se une a una rebelión para liberarlo.",
+      "idTrailer":"20"
 }
 ```
 
@@ -206,7 +208,7 @@ app.put("/contenidos/:idContenido", async (req, res) => {
 ```
 en postman establecer el metodo **PUT** para modificar un contenido utilizando como parametro su **ID** ,
 
-example :
+ejemplo :
 
 http://localhost:3000/contenidos/36 
 
@@ -214,9 +216,9 @@ luego establecida esa ruta......ingresar en el **BODY** de la peticion el siguie
 
 ```json
 {
-     "poster":"/poster/36.jpg",
-     "titulo": " Matrix, pelicula del hacker",
-     "idCategoria":"36",
+    "poster":"/poster/36.jpg",
+    "titulo": " Matrix, pelicula del hacker",
+    "idCategoria":"36",
     "resumen": "Un hacker descubre que el mundo que conoce es una simulación y se une a una rebelión para liberarlo.",
     "idTrailer":"20"
  }
@@ -246,11 +248,11 @@ app.delete("/contenidos/:idContenido", async (req, res) => {
   }
 });
 ```
-en postman al utilizar el metodo **DELETE** , establecer esta ruta que se encuentra abajo, para eliminar un contenido utilizando como parametro su **ID** : 
+en postman al utilizar el metodo **DELETE** , establecer la ruta que se encuentra abajo, para eliminar un contenido utilizando como parametro su **ID** : 
 
 http://localhost:3000/contenidos/36 
 
-en este caso no se necesita establecer ningun body porque lo que se esta buscando es eliminar el contenido por su **ID**
+__en este caso no se necesita establecer ningun body en la peticion porque lo que se esta buscando es eliminar el contenido por su **ID**__
 
 **CONTROL DE ERRORES PARA RUTAS INEXISTENTES**
 
