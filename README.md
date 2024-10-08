@@ -49,7 +49,7 @@ app.get("/contenidos", async (req, res) => {
 });
 ```
 
-respuesta un **200 OK** , devolviendo un json con todo el contenido.
+respuesta un **200 OK** , devolviendo un json con todo el contenido utilizando **GET**:
 example = http://localhost:3000/contenidos
 
 **RUTA PARA OBTENER UN CONTENIDO POR SU ID**
@@ -72,7 +72,7 @@ app.get("/contenidos/:idContenido", async (req, res) => {
 ```
 
 **parametros en la busqueda:**
-idContenido = especificar el id del contenido que desee buscar.
+idContenido = especificar el id del contenido que desee buscar utilizando **GET**:
 example : http://localhost:3000/contenidos/22
 
 respuesta un **200 OK** devolviendo en contenido del id proporcionado
@@ -103,7 +103,7 @@ app.get("/contenidos/titulo/:titulo", async (req, res) => {
 });
 ```
 
-los **PARAMETROS** de esta busqueda deben contener el titulo del contenido proporcionado , exmple = http://localhost:3000/contenidos/titulo/riverdale
+los **PARAMETROS** de esta busqueda deben contener el **titulo del contenido** proporcionado, utiliza en esta consulta el metodo **GET** , exmple = http://localhost:3000/contenidos/titulo/riverdale
 
 si la busqueda fue correcta devolveria un **200 OK**
 
@@ -143,7 +143,7 @@ app.post("/contenidos", async (req, res) => {
 
 en postman establecer esta ruta al hacer el **POST** : http://localhost:3000/contenidos 
 
-luego establecida esa ruta ingresar en el **BODY** de la peticion el siguiente JSON:
+luego establecida esa ruta, ingresar en el **BODY** de la peticion el siguiente **JSON**:
 
 ```json
 {
@@ -155,6 +155,8 @@ luego establecida esa ruta ingresar en el **BODY** de la peticion el siguiente J
     "idTrailer":"20"
 }
 ```
+
+**AVISO**
 
 intente en lo posible de insertar ese json (el que esta arriba)porque esta configurado con claves foraneas de otras tablas y si intenta de insertar otros valores corrobore que existan las claves foraneas de otras tablas si no le va a aparecer un error.
 
@@ -193,9 +195,11 @@ app.put("/contenidos/:idContenido", async (req, res) => {
   }
 });
 ```
-en postman establecer esta ruta al hacer el **PUT** : http://localhost:3000/contenidos/36 
+en postman establecer el metodo **PUT** para modificar un contenido utilizando como parametro su **ID** ,
+example :
+http://localhost:3000/contenidos/36 
 
-luego establecida esa ruta ingresar en el **BODY** de la peticion el siguiente JSON:
+luego establecida esa ruta......ingresar en el **BODY** de la peticion el siguiente JSON:
 
 ```json
 {
@@ -206,6 +210,8 @@ luego establecida esa ruta ingresar en el **BODY** de la peticion el siguiente J
     "idTrailer":"20"
  }
 ```
+**AVISO**
+
 intente en lo posible de insertar ese json (el que esta arriba) porque esta configurado con claves foraneas de otras tablas y si intenta de insertar otros valores corrobore las claves foraneas.
 
 **ELIMINAR UN CONTENIDO**
@@ -229,10 +235,11 @@ app.delete("/contenidos/:idContenido", async (req, res) => {
   }
 });
 ```
-en postman establecer esta ruta al hacer el **DELETE** : http://localhost:3000/contenidos/36 
+en postman al utilizar el metodo **DELETE** , establecer esta ruta que se encuentra abajo, para eliminar un contenido utilizando como parametro su **ID** : 
 
-en este caso no establecer ningun body porque lo que estamos buscando es eliminar el contenido
+http://localhost:3000/contenidos/36 
 
+en este caso no se necesita establecer ningun body porque lo que estamos buscando es eliminar el contenido por su **ID**
 
 **CONTROL DE ERRORES PARA RUTAS INEXISTENTES**
 
