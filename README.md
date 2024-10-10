@@ -217,7 +217,7 @@ luego establecida esa ruta......ingresar en el **BODY** de la peticion el siguie
 ```json
 {
     "poster":"/poster/36.jpg",
-    "titulo": " Matrix, pelicula del hacker",
+    "titulo": "Matrix modificado por POST para el TP2",
     "idCategoria":"36",
     "resumen": "Un hacker descubre que el mundo que conoce es una simulación y se une a una rebelión para liberarlo.",
     "idTrailer":"20"
